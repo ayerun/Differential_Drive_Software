@@ -2,10 +2,25 @@
 * A package that provides an interface for hardware on the Turtlebot. Converts body twists to wheel commands and calculates joint states using encoders.
 * Author: Arun Kumar
 
-## Example Usage
+## Nodes
+* turtle_interface
+    - converts body twists to wheel commands
+    - calculates joint states using encoders
+* follow_circle
+    - makes the robot follow a circle of a specific radius at a specific speed
+
+## Launch Files
+* basic_remote.launch
+    - launches serial_node on turtlebot to communicate with hardware
+* odom_teleop.launch
+    - allows teleoperation of turtlebot
+    - loads turtlebot in rviz
+    - tracks odometry
+    - contains arguement to launch follow_circle instead of teleoperation node
 ```
 roslaunch nuturtle_robot odom_teleop.launch
 ```
+
 ## Experiment 1
 * Drive robot forward and barckward in straight line (pure translation)
 * Stop at initial configuration
